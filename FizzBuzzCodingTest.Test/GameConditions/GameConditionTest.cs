@@ -46,7 +46,7 @@ namespace FizzBuzzCodingTest.Test.GameConditions
         [InlineData(7)]
         public void Should_return_buzzCondition_false_is_not_valid(int number)
         {
-            var result = _fizzCondition.IsValid(number);
+            var result = _buzzCondition.IsValid(number);
 
             Assert.False(result);
         }
@@ -56,7 +56,7 @@ namespace FizzBuzzCodingTest.Test.GameConditions
         [InlineData(10)]
         public void Should_return_buzzCondition_true_is_valid(int number)
         {
-            var result = _fizzCondition.IsValid(number);
+            var result = _buzzCondition.IsValid(number);
 
             Assert.True(result);
         }
@@ -66,7 +66,7 @@ namespace FizzBuzzCodingTest.Test.GameConditions
         [InlineData(5)]
         public void Should_return_fizzbuzzCondition_false_is_not_valid(int number)
         {
-            var result = _fizzCondition.IsValid(number);
+            var result = _fizzBuzzCondition.IsValid(number);
 
             Assert.False(result);
         }
@@ -76,7 +76,7 @@ namespace FizzBuzzCodingTest.Test.GameConditions
         [InlineData(30)]
         public void Should_return_fizzbuzzCondition_true_is_valid(int number)
         {
-            var result = _fizzCondition.IsValid(number);
+            var result = _fizzBuzzCondition.IsValid(number);
 
             Assert.True(result);
         }

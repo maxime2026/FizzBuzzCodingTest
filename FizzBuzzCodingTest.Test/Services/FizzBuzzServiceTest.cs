@@ -43,9 +43,10 @@ namespace FizzBuzzCodingTest.Test.Services
             Assert.Equal(range, result.Result.Count);
             Assert.Equal("1", result.Result[0]);
             Assert.Equal("2", result.Result[1]);
-            Assert.Equal("Fizz", result.Result[3]);
-            Assert.Equal("4", result.Result[4]);
-            Assert.Equal("Buzz", result.Result[5]);
+            Assert.Equal("Fizz", result.Result[2]);
+            Assert.Equal("4", result.Result[3]);
+            Assert.Equal("Buzz", result.Result[4]);
+            Assert.Equal("Fizz", result.Result[5]);
             Assert.Equal("7", result.Result[6]);
             Assert.Equal("8", result.Result[7]);
             Assert.Equal("Fizz", result.Result[8]);
