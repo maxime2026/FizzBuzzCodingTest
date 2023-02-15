@@ -4,6 +4,6 @@ namespace FizzBuzzCodingTest.Services.Interfaces
 {
     public interface IFizzBuzzService
     {
-        List<FizzBuzzResult> GetResult(int range);
+        FizzBuzzResult GetResult(int range);
     }
 }

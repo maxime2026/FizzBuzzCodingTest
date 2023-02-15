@@ -15,7 +15,7 @@ namespace FizzBuzzCodingTest.Services
 
         }
 
-        public List<FizzBuzzResult> GetResult(int range)
+        public FizzBuzzResult GetResult(int range)
         {
             throw new NotImplementedException();
         }
