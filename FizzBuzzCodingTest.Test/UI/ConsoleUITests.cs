@@ -29,7 +29,7 @@ namespace FizzBuzzCodingTest.Test.UI
         {
             var exception = Assert.Throws<ArgumentNullException>(() => _consoleUI.Run(args));
 
-            Assert.Equal("Value cannot be null. (Parameter 'Value missing')", exception.Message);
+            Assert.Equal("Value cannot be null. (Parameter 'Range missing')", exception.Message);
         }
 
         [Theory]

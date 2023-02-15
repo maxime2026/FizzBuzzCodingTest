@@ -2,11 +2,6 @@
 using FizzBuzzCodingTest.Services.Interfaces;
 using FizzBuzzCodingTest.UI.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FizzBuzzCodingTest.UI
 {
@@ -31,8 +26,8 @@ namespace FizzBuzzCodingTest.UI
             int range;
             if (args == null || args.Count() == 0 || int.TryParse(args[0], out range) == false)
             {
-                _logger.LogError("Value missing");
-                throw new ArgumentNullException("Value missing");
+                _logger.LogError("Range missing");
+                throw new ArgumentNullException("Range missing");
             }
 
             try
