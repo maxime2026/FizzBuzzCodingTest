@@ -9,16 +9,10 @@ namespace FizzBuzzCodingTest.GameConditions
 {
     public class BuzzCondition : IGameCondition
     {
-        private const string _display = "";
+        private const string _display = "Buzz";
 
-        public bool IsValid(int number)
-        {
-            throw new NotImplementedException();
-        }
+        public bool IsValid(int number) => number % 5 == 0;
 
-        public string Display()
-        { 
-            throw new NotImplementedException();
-        }
+        public string Display() => _display;
     }
 }
