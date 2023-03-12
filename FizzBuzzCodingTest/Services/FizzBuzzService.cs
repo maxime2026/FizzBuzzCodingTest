@@ -2,22 +2,26 @@
 using FizzBuzzCodingTest.GameConditions.Interfaces;
 using FizzBuzzCodingTest.Models;
 using FizzBuzzCodingTest.Services.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace FizzBuzzCodingTest.Services
 {
     public class FizzBuzzService : IFizzBuzzService
     {
+        private readonly ILogger _logger;
         private List<IGameCondition> _gameConditions;
         private const int _minRange = 1;
 
-        public FizzBuzzService()
+        public FizzBuzzService(List<IGameCondition> gameConditions, ILogger<FizzBuzzService> logger)
         {
-            _gameConditions = new List<IGameCondition> 
-            {
-                new FizzBuzzCondition(),
-                new FizzCondition(),
-                new BuzzCondition()
-            };
+            _logger = logger;
+            _gameConditions = gameConditions;
+            //_gameConditions = new List<IGameCondition> 
+            //{
+            //    new FizzBuzzCondition(),
+            //    new FizzCondition(),
+            //    new BuzzCondition()
+            //};
         }
 
         public FizzBuzzResult GetResult(int range)

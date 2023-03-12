@@ -1,4 +1,6 @@
-﻿using FizzBuzzCodingTest.Services;
+﻿using FizzBuzzCodingTest.GameConditions;
+using FizzBuzzCodingTest.GameConditions.Interfaces;
+using FizzBuzzCodingTest.Services;
 using FizzBuzzCodingTest.Services.Interfaces;
 using FizzBuzzCodingTest.UI;
 using FizzBuzzCodingTest.UI.Interfaces;
@@ -19,6 +21,13 @@ services.AddLogging(log =>
     log.AddConfiguration(configuration.GetSection("Logging"));
     log.AddConsole();
 });
+
+services.AddSingleton(new List<IGameCondition>
+            {
+                new FizzBuzzCondition(),
+                new FizzCondition(),
+                new BuzzCondition()
+            });
 
 services.AddTransient<IFizzBuzzService, FizzBuzzService>();
 services.AddTransient<IConsoleUI, ConsoleUI>();
